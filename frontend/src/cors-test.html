@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CORS Test</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .success {
+            color: green;
+        }
+
+        .error {
+            color: red;
+        }
+
+        pre {
+            background: #f0f0f0;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CORS Connectivity Test</h1>
+
+    <div>
+        <h3>Test 1: Health Check (Public)</h3>
+        <button onclick="testHealth()">Test Health</button>
+        <div id="health-result"></div>
+    </div>
+
+    <div>
+        <h3>Test 2: Login (Public)</h3>
+        <button onclick="testLogin()">Test Login</button>
+        <div id="login-result"></div>
+    </div>
+
+    <script>
+        async function testHealth() {
+            const resultDiv = document.getElementById('health-result');
+            resultDiv.innerHTML = 'Testing...';
+
+            try {
+                const response = await fetch('http://localhost:8888/auth/health');
+                const text = await response.text();
+
+                if (response.ok) {
+                    resultDiv.innerHTML = `<p class="success">✅ Success! Status: ${response.status}</p><pre>${text}</pre>`;
+                } else {
+                    resultDiv.innerHTML = `<p class="error">❌ Failed! Status: ${response.status}</p><pre>${text}</pre>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<p class="error">❌ Network/CORS Error: ${error.message}</p>`;
+                console.error(error);
+            }
+        }
+
+        async function testLogin() {
+            const resultDiv = document.getElementById('login-result');
+            resultDiv.innerHTML = 'Testing...';
+
+            try {
+                const response = await fetch('http://localhost:8888/auth/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username: 'test', password: 'test' })
+                });
+
+                // 401 is expected and means CORS worked!
+                if (response.status === 401 || response.status === 200) {
+                    resultDiv.innerHTML = `<p class="success">✅ Success! CORS is working. (Status: ${response.status})</p>`;
+                } else {
+                    resultDiv.innerHTML = `<p class="error">❌ Unexpected Status: ${response.status}</p>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<p class="error">❌ Network/CORS Error: ${error.message}</p>`;
+                console.error(error);
+            }
+        }
+    </script>
+</body>
+
+</html>

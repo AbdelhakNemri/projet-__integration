@@ -1,0 +1,44 @@
+{
+    "/auth": {
+        "target": "http://localhost:8888",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/players": {
+        "target": "http://localhost:8888",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/feedbacks": {
+        "target": "http://localhost:8888",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/events": {
+        "target": "http://localhost:8888",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/fields": {
+        "target": "http://localhost:8888",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/bookings": {
+        "target": "http://localhost:8888",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/notifications": {
+        "target": "http://localhost:8888",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}
