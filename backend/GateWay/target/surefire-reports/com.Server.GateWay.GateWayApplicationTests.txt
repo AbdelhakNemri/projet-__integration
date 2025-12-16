@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.Server.GateWay.GateWayApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.78 s -- in com.Server.GateWay.GateWayApplicationTests

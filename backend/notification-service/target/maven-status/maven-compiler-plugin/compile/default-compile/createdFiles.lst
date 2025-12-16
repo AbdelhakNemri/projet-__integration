@@ -1,0 +1,12 @@
+com\iset\dto\NotificationDTO.class
+com\iset\config\SecurityConfig$KeycloakRoleConverter.class
+com\iset\NotificationServiceApplication.class
+com\iset\dto\PlayerAcceptedNotificationRequest.class
+com\iset\config\SecurityConfig.class
+com\iset\entity\NotificationType.class
+com\iset\controller\NotificationController.class
+com\iset\entity\Notification.class
+com\iset\dto\CreateNotificationRequest.class
+com\iset\repository\NotificationRepository.class
+com\iset\service\NotificationService.class
+com\iset\dto\FieldReservedNotificationRequest.class

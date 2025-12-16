@@ -1,0 +1,13 @@
+com\iset\repository\FeedbackRepository.class
+com\iset\controller\FeedbackController.class
+com\iset\service\PlayerService.class
+com\iset\entity\Player.class
+com\iset\config\SecurityConfig$KeycloakRoleConverter.class
+com\iset\dto\FeedbackDTO.class
+com\iset\config\SecurityConfig.class
+com\iset\dto\PlayerDTO.class
+com\iset\controller\PlayerController.class
+com\iset\repository\PlayerRepository.class
+com\iset\service\FeedbackService.class
+com\iset\PlayerServiceApplication.class
+com\iset\entity\Feedback.class

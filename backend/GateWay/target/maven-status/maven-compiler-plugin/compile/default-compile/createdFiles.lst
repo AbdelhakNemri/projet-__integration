@@ -1,0 +1,4 @@
+com\Server\GateWay\config\AuthenticationFilter.class
+com\Server\GateWay\config\SecurityConfig.class
+com\Server\GateWay\GateWayApplication.class
+com\Server\GateWay\filter\JwtTokenFilter.class

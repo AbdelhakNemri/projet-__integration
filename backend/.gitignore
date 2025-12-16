@@ -1,0 +1,45 @@
+# Maven
+target/
+*.jar
+*.war
+*.zip
+*.class
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.classpath
+*.project
+*.settings
+.eclipse
+
+# Environment
+.env
+.env.local
+application-*.properties
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Spring Boot
+build/
+.gradle/
+
+# Node (if frontend included)
+node_modules/
+dist/
+.angular/
+
+# Database
+*.db
+*.sql
+
+# Temporary files
+*.tmp
+*.temp

@@ -1,0 +1,14 @@
+com\iset\dto\RegisterRequest.class
+com\iset\dto\UserInfo.class
+com\iset\config\SecurityConfig.class
+com\iset\dto\LoginRequest.class
+com\iset\config\FeignConfig.class
+com\iset\service\AuthService.class
+com\iset\config\KeycloakAdminConfig.class
+com\iset\dto\TokenResponse.class
+com\iset\dto\LoginResponse.class
+com\iset\dto\UserResponse.class
+com\iset\controller\GlobalExceptionHandler.class
+com\iset\AuthServiceApplication.class
+com\iset\controller\AuthController.class
+com\iset\client\KeycloakClient.class
