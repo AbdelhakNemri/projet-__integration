@@ -55,24 +55,6 @@ Multi-microservice Spring Boot application with Keycloak authentication.
 - **Spring Boot:** 3.5.7
 - **Spring Cloud:** 2024.0.0
 
-## Quick Start
-
-### 1. Start Infrastructure
-
-```bash
-# Start Keycloak (Docker)
-docker run -p 8080:8080 \
-  -e KEYCLOAK_ADMIN=admin \
-  -e KEYCLOAK_ADMIN_PASSWORD=admin \
-  quay.io/keycloak/keycloak:26.4.5 \
-  start-dev
-
-# Start MySQL (XAMPP or Docker)
-docker run -p 3306:3306 \
-  -e MYSQL_ROOT_PASSWORD=root \
-  -e MYSQL_DATABASE=sports_arena \
-  mysql:8.0
-```
 
 ### 2. Configure Keycloak
 
