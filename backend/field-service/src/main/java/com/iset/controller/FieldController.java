@@ -24,6 +24,22 @@ public class FieldController {
     @Autowired
     private FieldService fieldService;
 
+    @Autowired
+    private com.iset.service.WeatherService weatherService;
+
+    /**
+     * Get weather for a specific field
+     */
+    @GetMapping("/{id}/weather")
+    public ResponseEntity<com.iset.dto.WeatherResponse> getFieldWeather(@PathVariable Long id) {
+        // For demonstration, using static coordinates. In a real scenario, you'd get
+        // these from the Field entity.
+        // Tunis coordinates as default
+        double lat = 36.8065;
+        double lon = 10.1815;
+        return ResponseEntity.ok(weatherService.getWeatherData(lat, lon));
+    }
+
     /**
      * Health check endpoint
      */

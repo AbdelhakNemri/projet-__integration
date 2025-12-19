@@ -40,7 +40,7 @@ Multi-microservice Spring Boot application with Keycloak authentication.
 | **field-service** | 8084 | Sports field management |
 | **event-service** | 8085 | Event creation and management |
 | **notification-service** | 8086 | In-app notifications (player accepted, field reserved, internal alerts) |
-| **reservation1-service** | 8082 | Field reservations management |
+| **reservation-service** | 8082 | Field reservations management |
 | **discovery-service** | 8761 | Eureka service discovery |
 | **api-gateway** | 8888 | API Gateway routing (optional) |
 | **Keycloak** | 8080 | OAuth2/OIDC provider, user management |
@@ -55,6 +55,7 @@ Multi-microservice Spring Boot application with Keycloak authentication.
 - **Spring Boot:** 3.5.7
 - **Spring Cloud:** 2024.0.0
 
+## Quick Start
 
 ### 2. Configure Keycloak
 
@@ -176,6 +177,27 @@ PUT http://localhost:8086/notifications/{notificationId}/read
 Authorization: Bearer <access_token>
 ```
 
+### Field Service
+
+**Get Field Weather (External API):**
+```bash
+GET http://localhost:8084/fields/{id}/weather
+Authorization: Bearer <access_token>
+```
+*Returns real-time weather data for the field location using Open-Meteo API.*
+
+**Get All Available Fields:**
+```bash
+GET http://localhost:8084/fields
+Authorization: Bearer <access_token>
+```
+
+**Get Field by ID:**
+```bash
+GET http://localhost:8084/fields/{id}
+Authorization: Bearer <access_token>
+```
+
 **Notify player accepted (called from event-service):**
 ```bash
 POST http://localhost:8086/notifications/player-accepted
@@ -249,6 +271,20 @@ CREATE TABLE players (
 - **Role-Based Access:** @PreAuthorize annotations on endpoints
 - **CORS:** Configured for http://localhost:4200
 
+## External API & Resilience
+
+### 🌤️ Weather Integration (Feign Client)
+Implemented in **`field-service`** to provide real-time weather forecasts.
+- **External Provider:** [Open-Meteo API](https://open-meteo.com/)
+- **Technology:** Spring Cloud OpenFeign
+- **Implementation:** `WeatherClient` interface and `WeatherService` wrapper.
+
+### 🛡️ Fault Tolerance (Circuit Breaker)
+Implemented using **Resilience4j** to protect the system from external service outages.
+- **Service Protected:** Weather API calls in `field-service`.
+- **Fallback Logic:** Returns a safe default response (Temperature: 0.0, Status: N/A) if the external API is down.
+- **Configuration:** Custom thresholds for failure rate and automatic recovery (Half-Open state) defined in `application.properties`.
+![alt text](<weather soa.png>)
 ## Key Design Decisions
 
 1. **Keycloak for Auth:** Users stored in Keycloak, not in backend database
@@ -287,10 +323,3 @@ CREATE TABLE players (
 3. Push to branch: `git push origin feature/your-feature`
 4. Open a pull request
 
-## License
-
-MIT License
-
-## Contact
-
-For questions, reach out to the development team.

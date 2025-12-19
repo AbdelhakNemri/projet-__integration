@@ -1,0 +1,1593 @@
+{
+    "info": {
+        "_postman_id": "aa001122-3344-5566-7788-9900aabbccdd",
+        "name": "Sports Arena API",
+        "description": "Collection generated from backend/ENDPOINTS.md with example request bodies",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Auth Service",
+            "item": [
+                {
+                    "name": "Health Check",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/auth/health",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "auth",
+                                "health"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"password123\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/auth/login",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "auth",
+                                "login"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Registration URL",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/auth/register-url",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "auth",
+                                "register-url"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get User Info",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/auth/me",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "auth",
+                                "me"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Event Service",
+            "item": [
+                {
+                    "name": "Health Check",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/events/health",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events",
+                                "health"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Create Event",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"title\": \"Weekend Soccer Match\",\n    \"description\": \"Friendly match open for everyone\",\n    \"eventDate\": \"2025-06-15T18:00:00\",\n    \"duration\": 120,\n    \"maxParticipants\": 22,\n    \"minParticipants\": 10,\n    \"sportType\": \"SOCCER\",\n    \"fieldId\": 1,\n    \"isPublic\": true,\n    \"location\": \"Central Park Field 1\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/events",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Event by ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/events/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "List Available Events",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/events/available",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events",
+                                "available"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Search Events",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/events/search?query=soccer",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events",
+                                "search"
+                            ],
+                            "query": [
+                                {
+                                    "key": "query",
+                                    "value": "soccer"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "My Events",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/events/my-events",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events",
+                                "my-events"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "My Participations",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/events/my-participations",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events",
+                                "my-participations"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Invite Players",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[\n    \"player1@example.com\",\n    \"player2@example.com\"\n]"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/events/:eventId/invite",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events",
+                                ":eventId",
+                                "invite"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "eventId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Respond to Invite",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/events/:eventId/respond?response=ACCEPT",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events",
+                                ":eventId",
+                                "respond"
+                            ],
+                            "query": [
+                                {
+                                    "key": "response",
+                                    "value": "ACCEPT"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "eventId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Remove Participant",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/events/:eventId/participants/:participantId",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events",
+                                ":eventId",
+                                "participants",
+                                ":participantId"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "eventId",
+                                    "value": "1"
+                                },
+                                {
+                                    "key": "participantId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Join Event",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/events/:eventId/join",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events",
+                                ":eventId",
+                                "join"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "eventId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Rate Event",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"rating\": 5,\n    \"comment\": \"Great game, well organized!\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/events/:eventId/ratings",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events",
+                                ":eventId",
+                                "ratings"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "eventId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Event Ratings",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/events/:eventId/ratings",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events",
+                                ":eventId",
+                                "ratings"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "eventId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Field Service",
+            "item": [
+                {
+                    "name": "Health Check",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/fields/health",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields",
+                                "health"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Create Field",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Downtown Stadium\",\n    \"description\": \"Professional grade grass field\",\n    \"location\": \"123 Sport Ave\",\n    \"city\": \"Tunis\",\n    \"postalCode\": \"1000\",\n    \"capacity\": 500,\n    \"type\": \"GRASS\",\n    \"pricePerHour\": 150.0,\n    \"facilities\": \"Parking, Showers, Locker Rooms\",\n    \"enabled\": true\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/fields",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Field by ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/fields/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "List All Fields",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/fields",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "My Fields",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/fields/my-fields",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields",
+                                "my-fields"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Search by City",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/fields/search/city/:city",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields",
+                                "search",
+                                "city",
+                                ":city"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "city",
+                                    "value": "Tunis"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Search by Type",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/fields/search/type/:type",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields",
+                                "search",
+                                "type",
+                                ":type"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "type",
+                                    "value": "Grass"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "General Search",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/fields/search?query=stadium",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields",
+                                "search"
+                            ],
+                            "query": [
+                                {
+                                    "key": "query",
+                                    "value": "stadium"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update Field",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Downtown Stadium Updated\",\n    \"pricePerHour\": 160.0\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/fields/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Field",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/fields/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Add Availability",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"dayOfWeek\": \"MONDAY\",\n    \"startTime\": \"09:00:00\",\n    \"endTime\": \"22:00:00\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/fields/:fieldId/availability",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields",
+                                ":fieldId",
+                                "availability"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "fieldId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Availability",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/fields/:fieldId/availability",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields",
+                                ":fieldId",
+                                "availability"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "fieldId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Availability by Day",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/fields/:fieldId/availability/day/:dayOfWeek",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields",
+                                ":fieldId",
+                                "availability",
+                                "day",
+                                ":dayOfWeek"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "fieldId",
+                                    "value": "1"
+                                },
+                                {
+                                    "key": "dayOfWeek",
+                                    "value": "MONDAY"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update Availability",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"startTime\": \"10:00:00\",\n    \"endTime\": \"20:00:00\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/fields/:fieldId/availability/:availabilityId",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields",
+                                ":fieldId",
+                                "availability",
+                                ":availabilityId"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "fieldId",
+                                    "value": "1"
+                                },
+                                {
+                                    "key": "availabilityId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Availability",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/fields/:fieldId/availability/:availabilityId",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields",
+                                ":fieldId",
+                                "availability",
+                                ":availabilityId"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "fieldId",
+                                    "value": "1"
+                                },
+                                {
+                                    "key": "availabilityId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Add Review",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"rating\": 4,\n    \"comment\": \"Good field but parking was full\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/fields/:fieldId/reviews",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields",
+                                ":fieldId",
+                                "reviews"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "fieldId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Reviews",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/fields/:fieldId/reviews",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields",
+                                ":fieldId",
+                                "reviews"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "fieldId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Average Rating",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/fields/:fieldId/reviews/rating",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields",
+                                ":fieldId",
+                                "reviews",
+                                "rating"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "fieldId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Review",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/fields/:fieldId/reviews/:reviewId",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fields",
+                                ":fieldId",
+                                "reviews",
+                                ":reviewId"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "fieldId",
+                                    "value": "1"
+                                },
+                                {
+                                    "key": "reviewId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Create Booking",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"fieldId\": 1,\n    \"bookingDate\": \"2025-06-20T14:00:00\",\n    \"durationHours\": 2,\n    \"notes\": \"Regular team training\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/bookings",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "bookings"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Booking by ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/bookings/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "bookings",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Bookings for Field",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/bookings/field/:fieldId",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "bookings",
+                                "field",
+                                ":fieldId"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "fieldId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "My Bookings",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/bookings/my-bookings",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "bookings",
+                                "my-bookings"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Owner Reservations (All)",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/bookings/owner/all",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "bookings",
+                                "owner",
+                                "all"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Owner Reservations (Recent)",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/bookings/owner/recent",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "bookings",
+                                "owner",
+                                "recent"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Owner Stats",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/bookings/owner/stats",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "bookings",
+                                "owner",
+                                "stats"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update Booking Status",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"status\": \"CONFIRMED\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/bookings/:id/status",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "bookings",
+                                ":id",
+                                "status"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Cancel Booking",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/bookings/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "bookings",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Player Service",
+            "item": [
+                {
+                    "name": "Health Check",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/players/health",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "players",
+                                "health"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get My Profile",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/players/me",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "players",
+                                "me"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "List All Players",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/players",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "players"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Player by Email",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/players/email/:email",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "players",
+                                "email",
+                                ":email"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "email",
+                                    "value": "test@example.com"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Player by ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/players/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "players",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update Profile",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"phoneNumber\": \"+1234567890\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/players/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "players",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Add Feedback",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"rating\": 5,\n    \"comment\": \"Excellent team player\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/feedbacks/player/:playerId",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "feedbacks",
+                                "player",
+                                ":playerId"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "playerId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Feedbacks for Player",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/feedbacks/player/:playerId",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "feedbacks",
+                                "player",
+                                ":playerId"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "playerId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Average Rating",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/feedbacks/player/:playerId/rating",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "feedbacks",
+                                "player",
+                                ":playerId",
+                                "rating"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "playerId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Given Feedbacks",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/feedbacks/given/:giverId",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "feedbacks",
+                                "given",
+                                ":giverId"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "giverId",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Feedback by ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/feedbacks/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "feedbacks",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Feedback",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/feedbacks/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "feedbacks",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Notification Service",
+            "item": [
+                {
+                    "name": "Health Check",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/notifications/health",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "notifications",
+                                "health"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Create Notification",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"recipientId\": \"user-123\",\n    \"title\": \"System Update\",\n    \"message\": \"Maintenance scheduled for tonight\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/notifications",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "notifications"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Notify Player Accepted",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"eventId\": 1,\n    \"playerId\": \"user-456\",\n    \"organizerId\": \"organizer-789\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/notifications/player-accepted",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "notifications",
+                                "player-accepted"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Notify Field Reserved",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"fieldId\": 1,\n    \"bookingId\": 100,\n    \"ownerId\": \"owner-abc\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/notifications/field-reserved",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "notifications",
+                                "field-reserved"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "My Notifications",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/notifications",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "notifications"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Unread Count",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/notifications/unread-count",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "notifications",
+                                "unread-count"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Mark as Read",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/notifications/:id/read",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "notifications",
+                                ":id",
+                                "read"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Mark All as Read",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/notifications/read-all",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "notifications",
+                                "read-all"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Notification",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/notifications/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "notifications",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "http://localhost:8888",
+            "type": "string"
+        }
+    ]
+}

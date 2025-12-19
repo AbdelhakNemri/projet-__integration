@@ -1,17 +1,17 @@
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\event-service\src\main\java\com\iset\client\FieldServiceClient.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\event-service\src\main\java\com\iset\config\SecurityConfig.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\event-service\src\main\java\com\iset\controller\EventController.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\event-service\src\main\java\com\iset\dto\CreateEventRequest.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\event-service\src\main\java\com\iset\dto\EventDTO.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\event-service\src\main\java\com\iset\dto\EventRatingDTO.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\event-service\src\main\java\com\iset\dto\FieldDTO.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\event-service\src\main\java\com\iset\dto\InvitePlayersRequest.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\event-service\src\main\java\com\iset\dto\ParticipantDTO.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\event-service\src\main\java\com\iset\entity\Event.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\event-service\src\main\java\com\iset\entity\EventRating.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\event-service\src\main\java\com\iset\entity\Participant.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\event-service\src\main\java\com\iset\EventServiceApplication.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\event-service\src\main\java\com\iset\repository\EventRatingRepository.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\event-service\src\main\java\com\iset\repository\EventRepository.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\event-service\src\main\java\com\iset\repository\ParticipantRepository.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\event-service\src\main\java\com\iset\service\EventService.java
+C:\Users\LENOVO\Desktop\proj integ\backend\event-service\src\main\java\com\iset\client\FieldServiceClient.java
+C:\Users\LENOVO\Desktop\proj integ\backend\event-service\src\main\java\com\iset\config\SecurityConfig.java
+C:\Users\LENOVO\Desktop\proj integ\backend\event-service\src\main\java\com\iset\controller\EventController.java
+C:\Users\LENOVO\Desktop\proj integ\backend\event-service\src\main\java\com\iset\dto\CreateEventRequest.java
+C:\Users\LENOVO\Desktop\proj integ\backend\event-service\src\main\java\com\iset\dto\EventDTO.java
+C:\Users\LENOVO\Desktop\proj integ\backend\event-service\src\main\java\com\iset\dto\EventRatingDTO.java
+C:\Users\LENOVO\Desktop\proj integ\backend\event-service\src\main\java\com\iset\dto\FieldDTO.java
+C:\Users\LENOVO\Desktop\proj integ\backend\event-service\src\main\java\com\iset\dto\InvitePlayersRequest.java
+C:\Users\LENOVO\Desktop\proj integ\backend\event-service\src\main\java\com\iset\dto\ParticipantDTO.java
+C:\Users\LENOVO\Desktop\proj integ\backend\event-service\src\main\java\com\iset\entity\Event.java
+C:\Users\LENOVO\Desktop\proj integ\backend\event-service\src\main\java\com\iset\entity\EventRating.java
+C:\Users\LENOVO\Desktop\proj integ\backend\event-service\src\main\java\com\iset\entity\Participant.java
+C:\Users\LENOVO\Desktop\proj integ\backend\event-service\src\main\java\com\iset\EventServiceApplication.java
+C:\Users\LENOVO\Desktop\proj integ\backend\event-service\src\main\java\com\iset\repository\EventRatingRepository.java
+C:\Users\LENOVO\Desktop\proj integ\backend\event-service\src\main\java\com\iset\repository\EventRepository.java
+C:\Users\LENOVO\Desktop\proj integ\backend\event-service\src\main\java\com\iset\repository\ParticipantRepository.java
+C:\Users\LENOVO\Desktop\proj integ\backend\event-service\src\main\java\com\iset\service\EventService.java

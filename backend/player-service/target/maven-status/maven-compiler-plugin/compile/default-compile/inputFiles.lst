@@ -1,12 +1,12 @@
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\player-service\src\main\java\com\iset\config\SecurityConfig.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\player-service\src\main\java\com\iset\controller\FeedbackController.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\player-service\src\main\java\com\iset\controller\PlayerController.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\player-service\src\main\java\com\iset\dto\FeedbackDTO.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\player-service\src\main\java\com\iset\dto\PlayerDTO.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\player-service\src\main\java\com\iset\entity\Feedback.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\player-service\src\main\java\com\iset\entity\Player.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\player-service\src\main\java\com\iset\PlayerServiceApplication.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\player-service\src\main\java\com\iset\repository\FeedbackRepository.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\player-service\src\main\java\com\iset\repository\PlayerRepository.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\player-service\src\main\java\com\iset\service\FeedbackService.java
-C:\Users\LENOVO\Desktop\proj integ\backend - Copie\player-service\src\main\java\com\iset\service\PlayerService.java
+C:\Users\LENOVO\Desktop\proj integ\backend\player-service\src\main\java\com\iset\config\SecurityConfig.java
+C:\Users\LENOVO\Desktop\proj integ\backend\player-service\src\main\java\com\iset\controller\FeedbackController.java
+C:\Users\LENOVO\Desktop\proj integ\backend\player-service\src\main\java\com\iset\controller\PlayerController.java
+C:\Users\LENOVO\Desktop\proj integ\backend\player-service\src\main\java\com\iset\dto\FeedbackDTO.java
+C:\Users\LENOVO\Desktop\proj integ\backend\player-service\src\main\java\com\iset\dto\PlayerDTO.java
+C:\Users\LENOVO\Desktop\proj integ\backend\player-service\src\main\java\com\iset\entity\Feedback.java
+C:\Users\LENOVO\Desktop\proj integ\backend\player-service\src\main\java\com\iset\entity\Player.java
+C:\Users\LENOVO\Desktop\proj integ\backend\player-service\src\main\java\com\iset\PlayerServiceApplication.java
+C:\Users\LENOVO\Desktop\proj integ\backend\player-service\src\main\java\com\iset\repository\FeedbackRepository.java
+C:\Users\LENOVO\Desktop\proj integ\backend\player-service\src\main\java\com\iset\repository\PlayerRepository.java
+C:\Users\LENOVO\Desktop\proj integ\backend\player-service\src\main\java\com\iset\service\FeedbackService.java
+C:\Users\LENOVO\Desktop\proj integ\backend\player-service\src\main\java\com\iset\service\PlayerService.java
